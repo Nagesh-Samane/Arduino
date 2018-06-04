@@ -1,0 +1,61 @@
+
+int  led2=9,led1=5,count=1,led3=8, led4=4;
+void setup()
+{   
+  pinMode(led2,OUTPUT);
+      
+  pinMode(led1,OUTPUT);
+      
+  pinMode(led3,OUTPUT);
+
+   pinMode(led4,OUTPUT); 
+      
+ 
+}
+
+void loop() 
+{  digitalWrite(led3,LOW);
+  digitalWrite(led4,LOW);
+  while (count<255)
+  {
+   analogWrite(led2,count);
+   analogWrite(led1,255-count);
+   delay(10);
+   count++;
+  }
+ while(count>0)
+ {
+ analogWrite(led2,count);
+ analogWrite(led1,255-count);
+ delay(10);
+ count--;
+ }
+ 
+}
+  
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+ int t;
+ scanf("%d",&t);
+ int str[t];
+ for(int i=0;i<t;i++)
+    scanf("%d",str[i]);
+    
+    int i,sum=0,p;
+for(int j=0;j<t;j++)
+    for(i=1;p!=0;i++)
+    {
+        sum+=i;
+        p=str[j]/sum;
+    }
+    
+    printf("%d\n",i-1);
+}
+
+
